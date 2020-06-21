@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdditionalInformationController">
+   <children>
+      <Label layoutX="56.0" layoutY="183.0" text="Phone Number:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="269.0" text="Gender:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="425.0" text="Profile Photo:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="photo_iv" fitHeight="64.0" fitWidth="64.0" layoutX="226.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="377.0" layoutY="445.0" mnemonicParsing="false" onAction="#chooseImage" style="-fx-background-color: rgba(150,150,170,0.5);" text="Choose">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="phone_tf" layoutX="190.0" layoutY="181.0" promptText="Phone number" />
+      <ComboBox fx:id="gender_cb" layoutX="183.0" layoutY="267.0" prefHeight="31.0" prefWidth="200.0" promptText="Select your gender">
+          <items>
+              <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Prefer not to say" />
+                  <String fx:value="Male" />
+                  <String fx:value="Female" />
+                  <String fx:value="Non-binary" />
+              </FXCollections>
+          </items>
+      </ComboBox>
+      <Button layoutX="212.0" layoutY="573.0" mnemonicParsing="false" onAction="#signup" style="-fx-background-color: rgba(255,130,130,0.6);" text="Sign Up">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Button>
+      <Label fx:id="result_lbl" layoutX="258.0" layoutY="681.0" textFill="#ff0c0c" />
+      <Label layoutX="140.0" layoutY="61.0" text="Additional Information" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="35.0" layoutY="46.0" mnemonicParsing="false" onAction="#goHome" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Photos/AppPhotos/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
