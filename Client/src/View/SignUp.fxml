@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignUpController">
+    <children>
+        <Button layoutX="218.0" layoutY="553.0" mnemonicParsing="false" onAction="#signup" style="-fx-background-color: rgba(100,150,200,0.3);" text="Next">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font></Button>
+        <TextField fx:id="username_tf" layoutX="179.0" layoutY="140.0" />
+        <PasswordField fx:id="password_pf" layoutX="179.0" layoutY="235.0" />
+        <PasswordField fx:id="confirm_pf" layoutX="182.0" layoutY="294.0" />
+        <DatePicker fx:id="datePicker_dp" layoutX="163.0" layoutY="391.0" />
+        <Label layoutX="30.0" layoutY="145.0" text="Username:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="33.0" layoutY="236.0" text="Password:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="8.0" layoutY="295.0" text="Confirm Password:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="57.0" layoutY="392.0" text="Age:">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="220.0" layoutY="45.0" text="Sign Up">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+        <Label fx:id="result_lbl" layoutX="134.0" layoutY="704.0" text="              " />
+      <Button layoutX="48.0" layoutY="31.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Photos/AppPhotos/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>
